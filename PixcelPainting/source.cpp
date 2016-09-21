@@ -36,6 +36,19 @@ void drawLine(const int& i0, const int& j0, const int& i1, const int& j1, const 
 		drawPixel(i, j, red, green, blue);
 	}
 }
+void drawThickLine(const int& i0, const int& j0, const int& i1, const int& j1, const float& red, const float& green, const float& blue)
+{
+	
+	for (int i = i0; i <= i1; i++)
+	{
+
+		const int j = (j1 - j0)*(i - i0) / (i1 - i0) + j0;
+
+		drawPixel(i, j-1, red, green, blue);
+		drawPixel(i, j, red, green, blue);
+		drawPixel(i, j+1, red, green, blue);
+	}
+}
 //void drawCircle(const int& i0, const int& j0, const int& i1, const int& j1, const float& red, const float& green, const float& blue)
 void drawCircle(const int& i0, const int& j0, const int& r, const float& red, const float& green, const float& blue)
 {
@@ -75,10 +88,8 @@ void drawOnPixelBuffer()
 	//TODO: anti-aliasing
 	const int i0 = 100, i1 = 200;
 	const int j0 = 50, j1 = 50;
-	for (int k = 0;k < 20;k++)   //draw  Thickner line
-	{
-		drawLine(80, 300 + k, 150,400+ k, 0.0f, 0.0f, 0.0f);
-	}
+	
+	drawThickLine(80, 300, 150, 400, 0.0f, 0.0f, 0.0f);
 	drawLine(220, 300, 380, 300, 0.0f, 0.0f, 0.0f); //draw Square
 	drawLine(380, 300, 380, 450, 0.0f, 0.0f, 0.0f);
 	drawLine(220, 450, 380, 450, 0.0f, 0.0f, 0.0f);
@@ -99,6 +110,7 @@ void drawOnPixelBuffer()
 	drawLine(250, 100, 350, 100, 0.0f, 0.0f, 0.0f);
 	drawLine(200, 150, 250, 100, 0.0f, 0.0f, 0.0f);
 	drawLine(200, 150, 300, 200, 0.0f, 0.0f, 0.0f);
+
 
 
 	drawCircle(500,150,50,0.0f,0.0f,0.0f); //draw Circle
