@@ -49,7 +49,7 @@ void drawCircle(const int& i0, const int& j0, const int& r, const float& red, co
 			int f1 = (i - i0)*(i - i0) + (j - j0)*(j - j0) - (r-1)*(r-1);
 			if (f<=0&&f1>=0)
 			{
-				drawPixel(i, j, 1.0f, 0.0f, 0.0f);
+				drawPixel(i, j, 0.0f, 0.0f, 0.0f);
 			}
 			
 		}
