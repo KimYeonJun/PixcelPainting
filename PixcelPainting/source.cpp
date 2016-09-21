@@ -75,31 +75,33 @@ void drawOnPixelBuffer()
 	//TODO: anti-aliasing
 	const int i0 = 100, i1 = 200;
 	const int j0 = 50, j1 = 50;
-	for (int k = 0;k < 20;k++)
+	for (int k = 0;k < 20;k++)   //draw  Thickner line
 	{
 		drawLine(80, 300 + k, 150,400+ k, 0.0f, 0.0f, 0.0f);
 	}
-	drawLine(220, 300, 380, 300, 0.0f, 0.0f, 0.0f);
+	drawLine(220, 300, 380, 300, 0.0f, 0.0f, 0.0f); //draw Square
 	drawLine(380, 300, 380, 450, 0.0f, 0.0f, 0.0f);
 	drawLine(220, 450, 380, 450, 0.0f, 0.0f, 0.0f);
 	drawLine(220, 300, 220, 450, 0.0f, 0.0f, 0.0f);
 
-	for (int k = 300;k <= 450;k++)
+	for (int k = 300;k <= 450;k++)  //draw Square(filled with a non-white color
 	{
 	drawLine(420, k, 600, k, 0.0f, 0.0f, 0.0f);
 	}
 	
-	drawLine(70, 150, 150, 150, 0.0f, 0.0f, 0.0f);
+	drawLine(70, 150, 150, 150, 0.0f, 0.0f, 0.0f); //draw Triangle
 	drawLine(110,190, 150, 150, 0.0f, 0.0f, 0.0f);
 	drawLine(70, 150, 110, 190, 0.0f, 0.0f, 0.0f);
 
 
-	drawLine(300, 200, 400, 150, 0.0f, 0.0f, 0.0f);
+	drawLine(300, 200, 400, 150, 0.0f, 0.0f, 0.0f);//draw pentagon
 	drawLine(350, 100, 400, 150, 0.0f, 0.0f, 0.0f);
 	drawLine(250, 100, 350, 100, 0.0f, 0.0f, 0.0f);
 	drawLine(200, 150, 250, 100, 0.0f, 0.0f, 0.0f);
 	drawLine(200, 150, 300, 200, 0.0f, 0.0f, 0.0f);
-	drawCircle(500,150,50,0.0f,0.0f,0.0f);
+
+
+	drawCircle(500,150,50,0.0f,0.0f,0.0f); //draw Circle
 	
 	//TODO: try moving object
 
