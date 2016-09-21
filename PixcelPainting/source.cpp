@@ -89,13 +89,14 @@ void drawOnPixelBuffer()
 	const int i0 = 100, i1 = 200;
 	const int j0 = 50, j1 = 50;
 	
-	drawThickLine(80, 300, 150, 400, 0.0f, 0.0f, 0.0f);
+	drawThickLine(80, 300, 150, 400, 0.0f, 0.0f, 0.0f);//drawThickLine
+
 	drawLine(220, 300, 380, 300, 0.0f, 0.0f, 0.0f); //draw Square
 	drawLine(380, 300, 380, 450, 0.0f, 0.0f, 0.0f);
 	drawLine(220, 450, 380, 450, 0.0f, 0.0f, 0.0f);
 	drawLine(220, 300, 220, 450, 0.0f, 0.0f, 0.0f);
 
-	for (int k = 300;k <= 450;k++)  //draw Square(filled with a non-white color
+	for (int k = 300;k <= 450;k++)  //draw Square(filled with a non-white color)
 	{
 	drawLine(420, k, 600, k, 0.0f, 0.0f, 0.0f);
 	}
